@@ -77,7 +77,7 @@ func (f *FileReader) BufferReader() *bufio.Reader {
 	return bufio.NewReader(f.file)
 }
 
-func NewReader(path string) (*FileReader, error) {
+func NewFileReader(path string) (*FileReader, error) {
 	f := &FileReader{path: path}
 	return f, f.open()
 }
